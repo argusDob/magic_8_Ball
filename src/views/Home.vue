@@ -64,7 +64,6 @@ export default {
   methods: {
     ...mapMutations("notification", ["NOTIFY", "SET_STATUS"]),
     submit() {
-      console.log("aflkasdnflksadn")
       this.isNewResponse = false;
       const theQuestion = this.theQuestion;
       const isQuestion = this.isQuestion(theQuestion);
