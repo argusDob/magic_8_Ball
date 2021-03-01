@@ -81,7 +81,6 @@ export default {
       if(typeof(pQuestion) !== "undefined"){
       this.$store.dispatch("appState/getTheAnswer", pQuestion).then(
         response => {
-          console.log(response);
           if (response.status === 200) {
             this.returnTheAnwer();
             this.showNotifications("Our robot has responded to your question:","success");
