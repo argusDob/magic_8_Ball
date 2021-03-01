@@ -13,7 +13,7 @@
     <div v-else  style="margin-top:10px">
       <spinner class="spinner" v-if="isLoading"></spinner>
     </div>
-    <form class="questionForm">
+    <form class="questionForm" @submit.prevent>
       <input-text
         v-model="theQuestion"
         label="Question"
@@ -64,6 +64,7 @@ export default {
   methods: {
     ...mapMutations("notification", ["NOTIFY", "SET_STATUS"]),
     submit() {
+      console.log("aflkasdnflksadn")
       this.isNewResponse = false;
       const theQuestion = this.theQuestion;
       const isQuestion = this.isQuestion(theQuestion);
@@ -81,6 +82,7 @@ export default {
       if(typeof(pQuestion) !== "undefined"){
       this.$store.dispatch("appState/getTheAnswer", pQuestion).then(
         response => {
+          console.log(response);
           if (response.status === 200) {
             this.returnTheAnwer();
             this.showNotifications("Our robot has responded to your question:","success");
