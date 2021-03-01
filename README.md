@@ -2,7 +2,7 @@
 
 ## Project scope
 
-This project is a simple Vue application that communicates with a third party via Axios library. The user types a question and the Server responds with an answer.
+The application allows a user to enter a question into a text box, click the submit button, and receive a prediction in response.
 
 ## Project functionalities
 
